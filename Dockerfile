@@ -31,7 +31,7 @@ RUN cd /tmp/delegate${DELEGATE_VERSION} && make
 # install haproxy
 ENV HAPROXY_VERSION 1.4.25
 RUN curl http://haproxy.1wt.eu/download/1.4/src/haproxy-${HAPROXY_VERSION}.tar.gz | tar xz -C /tmp
-RUN cd /tmp/haproxy-${HAPROXY_VERSION}/ && make TARGET=linux2628 CPU=native USE_OPENSSL=1 USE_ZLIB=1
+RUN cd /tmp/haproxy-${HAPROXY_VERSION}/ && make TARGET=linux2628 USE_OPENSSL=1 USE_ZLIB=1
 RUN cd /tmp/haproxy-${HAPROXY_VERSION}/ && make install
 ADD ./haproxy.conf /etc/default/haproxy.conf
 
