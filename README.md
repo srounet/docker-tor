@@ -5,8 +5,7 @@ This image will setup 10 tor, 10 delegate (one for each tor) and Haproxy to mana
 
 ## Building docker-tor
 
-Running this will build you a docker image with the latest version of both
-docker-teamspeak and TeamSpeak itself.
+Running this will build you a docker image with tor, delegate and HAProxy.
 
     git clone https://github.com/srounet/docker-tor
     cd docker-tor
