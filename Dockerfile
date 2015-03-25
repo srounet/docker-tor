@@ -5,17 +5,10 @@ FROM ubuntu:latest
 RUN apt-get update
 
 # install sys utils
-RUN apt-get install -y build-essential
-RUN apt-get install -y libevent-dev
-RUN apt-get install -y libssl-dev
-RUN apt-get install -y htop
-RUN apt-get install -y iotop
-RUN apt-get install -y tmux
-RUN apt-get install -y curl
-RUN apt-get install -y g++
+RUN apt-get install -y build-essential libevent-dev libssl-dev curl g++
 
 # install tor
-ENV TOR_VERSION 0.2.4.21
+ENV TOR_VERSION 0.2.6.6
 RUN curl https://www.torproject.org/dist/tor-${TOR_VERSION}.tar.gz | tar xz -C /tmp
 RUN cd /tmp/tor-${TOR_VERSION} && ./configure
 RUN cd /tmp/tor-${TOR_VERSION} && make -j 4
