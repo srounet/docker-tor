@@ -1,5 +1,5 @@
-# use the ubuntu base image 12.10
-FROM ubuntu:12.10
+# use the ubuntu latest image
+FROM ubuntu:latest
 
 # make sure the package repository is up to date
 RUN apt-get update
