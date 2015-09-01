@@ -5,7 +5,7 @@ FROM ubuntu:latest
 RUN apt-get -qq update && apt-get -qq --yes upgrade
 
 # install sys utils
-RUN apt-get install -y build-essential libevent-dev libssl-dev curl g++
+RUN apt-get -qq install --yes build-essential libevent-dev libssl-dev curl g++
 
 # install tor
 ENV TOR_VERSION 0.2.6.6
