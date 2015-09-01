@@ -13,7 +13,7 @@
 /usr/local/bin/tor --SocksPort 9060 --PidFile /var/run/tor/10.pid --RunAsDaemon 1 --DataDirectory /var/db/tor/10
 
 # launch 10 delegated
-DELEGATE_VERSION=9.9.7
+DELEGATE_VERSION=9.9.13
 /tmp/delegate${DELEGATE_VERSION}/src/delegated -P9151 SERVER=http SOCKS=localhost:9051 PIDFILE=/var/run/delegated/1.pid OWNER=root/root
 /tmp/delegate${DELEGATE_VERSION}/src/delegated -P9152 SERVER=http SOCKS=localhost:9052 PIDFILE=/var/run/delegated/2.pid OWNER=root/root
 /tmp/delegate${DELEGATE_VERSION}/src/delegated -P9153 SERVER=http SOCKS=localhost:9053 PIDFILE=/var/run/delegated/3.pid OWNER=root/root
