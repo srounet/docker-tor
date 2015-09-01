@@ -1,8 +1,8 @@
 # use the ubuntu latest image
 FROM ubuntu:latest
 
-# make sure the package repository is up to date
-RUN apt-get update
+# Update and upgrade system
+RUN apt-get -qq update && apt-get -qq --yes upgrade
 
 # install sys utils
 RUN apt-get install -y build-essential libevent-dev libssl-dev curl g++
