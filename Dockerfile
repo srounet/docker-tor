@@ -34,6 +34,6 @@ RUN chmod -R 700 /var/db/tor
 ADD start.sh /
 RUN chmod +x /start.sh
 
-EXPOSE 9100 9101 53
+EXPOSE 9100 9101 2090 53
 
 CMD ["./start.sh"]
