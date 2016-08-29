@@ -8,7 +8,7 @@ RUN apt-get -qq update && apt-get -qq --yes upgrade
 RUN apt-get -qq install --yes build-essential libevent-dev libssl-dev curl g++
 
 # install tor
-ENV TOR_VERSION 0.2.7.6
+ENV TOR_VERSION 0.2.8.7
 RUN curl -0 -L https://www.torproject.org/dist/tor-${TOR_VERSION}.tar.gz | tar xz -C /tmp
 RUN cd /tmp/tor-${TOR_VERSION} && ./configure
 RUN cd /tmp/tor-${TOR_VERSION} && make -j 4
@@ -22,7 +22,7 @@ RUN sed -i -e '1i#include <util.h>\' /tmp/delegate${DELEGATE_VERSION}/maker/_-fo
 RUN cd /tmp/delegate${DELEGATE_VERSION} && make
 
 # install haproxy
-ENV HAPROXY_VERSION 1.6.3
+ENV HAPROXY_VERSION 1.6.8
 RUN curl -0 -L http://haproxy.1wt.eu/download/1.6/src/haproxy-${HAPROXY_VERSION}.tar.gz | tar xz -C /tmp
 RUN cd /tmp/haproxy-${HAPROXY_VERSION}/ && make TARGET=linux2628 USE_OPENSSL=1 USE_ZLIB=1
 RUN cd /tmp/haproxy-${HAPROXY_VERSION}/ && make install
