@@ -1,5 +1,5 @@
 # use the ubuntu latest image
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 # Update and upgrade system
 RUN apt-get -qq update && apt-get -qq --yes upgrade
