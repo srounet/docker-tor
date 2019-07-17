@@ -9,7 +9,7 @@ Running this will build you a docker image with tor, delegate and HAProxy.
 
     git clone https://github.com/srounet/docker-tor
     cd docker-tor
-    docker build -t srounet/tor .
+    docker build -t srounet/docker-tor .
 
 ## Running docker-tor
 
